@@ -8,6 +8,10 @@ window = pygame.display.set_mode((1280,720),pygame.RESIZABLE)  #cambiar pygame.R
 pygame.display.set_caption("Juego")
 window.fill((0,0,0))
 
+run = True
+game_over = False
+start = False
+reboot = False
 
 while run:
 
