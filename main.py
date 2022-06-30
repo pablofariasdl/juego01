@@ -1,5 +1,5 @@
 import pygame, sys
-import funtion, menu, game, score
+import function, menu, game, score
 
 FPS = 30 #frames per second setting
 fpsClock = pygame.time.Clock()
@@ -10,18 +10,18 @@ window.fill((0,0,0))
 
 run = True
 game_over = False
-start = False
+stop = False
 reboot = False
 
 while run:
 
-    menu.inicio(window,start)
+    menu.start(window,stop)
 
     game.game(window,game_over)
 
     score.scores(window,reboot)        
     
     game_over = False
-    start = False
+    stop = False
     reboot = False    
     
