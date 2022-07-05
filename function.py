@@ -6,4 +6,3 @@ def draw(screen,adress,position):
     pygame.display.flip()
 
 
-    
