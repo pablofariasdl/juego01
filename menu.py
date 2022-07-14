@@ -1,32 +1,6 @@
 import pygame, sys
 import function
 
-def menu (screen,adress,ubication,amount):
-    position = 0
-    
-    
-    loop = True
-
-    while loop:
-
-        function.draw(screen,adress[position][0],ubication[0])
-        function.draw(screen,adress[position][1],ubication[1])
-        function.draw(screen,adress[position][2],ubication[2])
-
-        for event in pygame.event.get():
-
-            if event.type == pygame.KEYDOWN:
-                if position >= 0 and position <= 2:
-                    if event.key == pygame.K_DOWN and position < 2:
-                        position = position +1
-                    if event.key == pygame.K_UP and position > 0:
-                        position = position -1
-                print(position)
-                if event.key == pygame.K_RETURN:
-                    return position
-            if event.type == pygame.QUIT:
-                sys.exit()
-
 def start (screen,stop): 
 
     adress_menu1 = [['Image/start2.png','Image/options1.png','Image/exit1.png'],
@@ -47,7 +21,7 @@ def start (screen,stop):
         
             function.draw(screen,"Image/wallpaper_menu.png",(0,0))
             function.draw(screen,"Image/title.png",(80,80))   
-            position = menu (screen,adress_menu1,ubication_menu1,3)
+            position = function.menu (screen,adress_menu1,ubication_menu1,3)
             if position == 0:
                 stop = True
             if position == 1:
@@ -55,7 +29,7 @@ def start (screen,stop):
                 while not sanata2:
                 
                     function.draw(screen,"Image/wallpaper_menu2.png",(0,0))
-                    position2 = menu (screen,adress_menu2,ubication_menu2,3)
+                    position2 = function.menu (screen,adress_menu2,ubication_menu2,3)
                     
                     sanata = False
                     while not sanata:
