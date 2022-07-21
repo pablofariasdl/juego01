@@ -24,7 +24,6 @@ def menu (screen,adress,ubication,amount):
                         position = position +1
                     if event.key == pygame.K_UP and position > 0:
                         position = position -1
-                print(position)
                 if event.key == pygame.K_RETURN:
                     return position
             if event.type == pygame.QUIT:

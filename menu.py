@@ -25,21 +25,21 @@ def start (screen,stop):
             if position == 0:
                 stop = True
             if position == 1:
-                sanata2 = False
-                while not sanata2:
+                control2 = False
+                while not control2:
                 
                     function.draw(screen,"Image/wallpaper_menu2.png",(0,0))
                     position2 = function.menu (screen,adress_menu2,ubication_menu2,3)
                     
-                    sanata = False
-                    while not sanata:
+                    control = False
+                    while not control:
                     
                         if position2 == 0:
                             function.draw(screen,"Image/wallpaper_controls.png",(0,0))
                             for event in pygame.event.get():
                                 if event.type == pygame.KEYDOWN:
                                     if event.key == pygame.K_RETURN:
-                                        sanata = True
+                                        control = True
                                 if event.type == pygame.QUIT:
                                     sys.exit()                
                         if position2 == 1:
@@ -51,13 +51,13 @@ def start (screen,stop):
                                     if event.key == pygame.K_RIGHT:
                                         print ("hay q restar")
                                     if event.key == pygame.K_RETURN:
-                                        sanata = True
+                                        control = True
                                 if event.type == pygame.QUIT:
                                     sys.exit()
 
                         if position2 == 2:
-                            sanata = True
-                            sanata2 = True
+                            control = True
+                            control2 = True
             if position == 2:
                 sys.exit()
     
