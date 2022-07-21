@@ -1,10 +1,11 @@
 import pygame, sys
+import function
 
 def scores (screen,stop):
+    function.draw(screen,"Image/wallpaper_score.png",(0,0))
     while not stop:
 
-        screen.fill((0,255,255))
-        pygame.display.flip()
+        
 
         for event in pygame.event.get():
             
