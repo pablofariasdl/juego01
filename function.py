@@ -10,7 +10,7 @@ def write_draw(screen,sentence,ubication):
 
     list_letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q",
                   "R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7",
-                  "8","9","0"]
+                  "8","9","0"," "]
     list_adress=["Image/Letters/A.png","Image/Letters/B.png","Image/Letters/C.png",
                  "Image/Letters/D.png","Image/Letters/E.png","Image/Letters/F.png",
                  "Image/Letters/G.png","Image/Letters/H.png","Image/Letters/I.png",
@@ -22,7 +22,8 @@ def write_draw(screen,sentence,ubication):
                  "Image/Letters/Y.png","Image/Letters/Z.png","Image/Letters/0.png",
                  "Image/Letters/1.png","Image/Letters/2.png","Image/Letters/3.png",
                  "Image/Letters/4.png","Image/Letters/5.png","Image/Letters/6.png",
-                 "Image/Letters/7.png","Image/Letters/8.png","Image/Letters/9.png",]
+                 "Image/Letters/7.png","Image/Letters/8.png","Image/Letters/9.png",
+                 "Image/Letters/0.png"]
 
     list_adressb=["Image/Letters/A2.png","Image/Letters/B2.png","Image/Letters/C2.png",
                   "Image/Letters/D2.png","Image/Letters/E2.png","Image/Letters/F2.png",
@@ -35,15 +36,15 @@ def write_draw(screen,sentence,ubication):
                   "Image/Letters/Y2.png","Image/Letters/Z2.png","Image/Letters/0b.png",
                   "Image/Letters/1b.png","Image/Letters/2b.png","Image/Letters/3b.png",
                   "Image/Letters/4b.png","Image/Letters/5b.png","Image/Letters/6b.png",
-                  "Image/Letters/7b.png","Image/Letters/8b.png","Image/Letters/9b.png"]
-    text_adress=["Image/Letters/A.png","Image/Letters/A.png","Image/Letters/A.png"]
+                  "Image/Letters/7b.png","Image/Letters/8b.png","Image/Letters/9b.png",
+                  "Image/Letters/0.png"]
+    text_adress=[]
     x=y=0
     position=ubication
     while x <len(text):
         if text[x] == list_letters[y]:
-            text_adress[x]=list_adress[y]
-            print(text_adress)
-            
+            data=[list_adress[y]]
+            text_adress=text_adress+data
             position = (position[0]+40,position[1])
             draw(screen,text_adress[x],position)  
             x=x+1
