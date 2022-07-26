@@ -40,11 +40,17 @@ def scores (screen,stop):
     
     name=""
     point=""
+    position=(240,100)
+    #position2=(480,100)
     for dato in score_list2:
         name += dato[0]+" "
         point += str(dato[1])+" "
+        function.write_draw (screen,dato[0],position)
+        #function.write_draw (screen,point,position2)
+        position=(position[0],position[1]+60)
     sanata= name +"\n"+point 
     print(sanata)
+    
 
     while not stop:
 
