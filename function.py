@@ -1,17 +1,9 @@
 import sys,pygame
 
-def draw(screen,adress,position):
-    image = pygame.image.load(adress)
-    screen.blit(image,position)
-    pygame.display.flip()
-
-def write_draw(screen,sentence,ubication):
-    text = sentence
-
-    list_letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q",
+list_letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q",
                   "R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7",
                   "8","9","0"," "]
-    list_adress=["Image/Letters/A.png","Image/Letters/B.png","Image/Letters/C.png",
+list_adress=["Image/Letters/A.png","Image/Letters/B.png","Image/Letters/C.png",
                  "Image/Letters/D.png","Image/Letters/E.png","Image/Letters/F.png",
                  "Image/Letters/G.png","Image/Letters/H.png","Image/Letters/I.png",
                  "Image/Letters/J.png","Image/Letters/K.png","Image/Letters/L.png",
@@ -25,7 +17,7 @@ def write_draw(screen,sentence,ubication):
                  "Image/Letters/7.png","Image/Letters/8.png","Image/Letters/9.png",
                  "Image/Letters/0.png"]
 
-    list_adressb=["Image/Letters/A2.png","Image/Letters/B2.png","Image/Letters/C2.png",
+list_adressb=["Image/Letters/A2.png","Image/Letters/B2.png","Image/Letters/C2.png",
                   "Image/Letters/D2.png","Image/Letters/E2.png","Image/Letters/F2.png",
                   "Image/Letters/G2.png","Image/Letters/H2.png","Image/Letters/I2.png",
                   "Image/Letters/J2.png","Image/Letters/K2.png","Image/Letters/L2.png",
@@ -38,6 +30,16 @@ def write_draw(screen,sentence,ubication):
                   "Image/Letters/4b.png","Image/Letters/5b.png","Image/Letters/6b.png",
                   "Image/Letters/7b.png","Image/Letters/8b.png","Image/Letters/9b.png",
                   "Image/Letters/0.png"]
+
+def draw(screen,adress,position):
+    image = pygame.image.load(adress)
+    screen.blit(image,position)
+    pygame.display.flip()
+
+def write_draw(screen,sentence,ubication):
+    text = sentence
+
+    
     text_adress=[]
     x=y=0
     position=ubication
