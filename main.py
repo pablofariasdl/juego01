@@ -17,9 +17,9 @@ while run:
 
     menu.start(window,stop)
 
-    game.game(window,game_over)
+    points= game.game(window,game_over)
 
-    score.scores(window,reboot)        
+    score.scores(window,reboot,points)        
     
     game_over = False
     stop = False

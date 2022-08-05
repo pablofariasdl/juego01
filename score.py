@@ -13,8 +13,6 @@ def name_up(screen,score):
     
     while not control:
 
-        
-
         function.draw(screen,function.list_adress[position[0]],ubication[0])
         function.draw(screen,function.list_adress[position[1]],ubication[1])
         function.draw(screen,function.list_adress[position[2]],ubication[2])
@@ -22,32 +20,32 @@ def name_up(screen,score):
             
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP and position[x]<37:
-                    position[x]=position[x]+1
+                    position[x]+=1
         
                 if event.key == pygame.K_DOWN and position[x]>=0:
-                    position[x]=position[x]-1
+                    position[x]-=1
 
                 if event.key == pygame.K_LEFT and x>=0:
-                    x=x-1
+                    x-=1
                 if event.key == pygame.K_RIGHT and x<2:
-                    x=x+1
+                    x+=1
                 if event.key == pygame.K_RETURN:
                     control = True
-                function.draw(screen, function.list_adress[position[0]],ubication[0])
-                function.draw(screen, function.list_adress[position[1]],ubication[1])
-                function.draw(screen, function.list_adress[position[2]],ubication[2])
             if event.type == pygame.QUIT:
                 sys.exit()
-        function.draw(screen,function.list_adressb[position[0]],ubication[0])
-        function.draw(screen,function.list_adressb[position[1]],ubication[1])
-        function.draw(screen,function.list_adressb[position[2]],ubication[2])
+        z="012"
+        for a in z:
+            if int(a) == x:
+                function.draw(screen, function.list_adressb[position[int(a)]],ubication[int(a)])
+            else:
+                function.draw(screen, function.list_adress[position[int(a)]],ubication[int(a)])
         
     sanata=function.list_letters[position[0]]+function.list_letters[position[1]]+function.list_letters[position[2]]
     return(sanata)
 
 
-def scores (screen,stop):
-    score = 3000000
+def scores (screen,stop,points):
+    score = points
     name=name_up(screen,score)
     function.draw(screen,"Image/wallpaper_score.png",(0,0))
     
@@ -55,7 +53,6 @@ def scores (screen,stop):
     score_list = [["AAA",999999],["AAA",999999],["AAA",999999],["AAA",999999],
                   ["AAA",999999],["AAA",999999],["AAA",999999],["AAA",999999],
                   ["AAA",999999],["AAA",999999],]
-    
     with open("scores.txt") as archivo:
         li1= archivo.readline()
         li2= archivo.readline()
@@ -66,24 +63,22 @@ def scores (screen,stop):
             score_list[x][0]=top[x]
             score_list[x][1]=int(topu[x])
             x=x+1
-
-    score_list2 = [["CAP",999999],["SNK",100000],["NAM",10000],["KON",1000],
-                  ["AAA",999],["BBB",888],["CCC",777],["DDD",666],
-                  ["EEE",555],["FFF",444]]
-
+    score_list2 = [["AAA",9],["AAA",9],["AAA",9],["AAA",9],
+                  ["AAA",9],["AAA",9],["AAA",9],["AAA",9],
+                  ["AAA",9],["AAA",9],]
     x= y =0
     
     while y <= 9:
         if score > score_list[x][1] and x==y:
             score_list2[y][1]= score
             score_list2[y][0]= name
-            y= y+1
+            y+= 1
         else:
             score_list2[y][1]= score_list[x][1]
             score_list2[y][0]= score_list[x][0]
-            x = x+1
-            y = y+1
-    
+            x +=1
+            y +=1
+
     name=""
     point=""
     position=(240,100)

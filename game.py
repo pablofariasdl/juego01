@@ -9,10 +9,11 @@ def game (screen,stop):
         for event in pygame.event.get():
             
             #quedo asi pero es any key
-            print("Press SPACE to pause")
+            print("Press ESC to pause")
             
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     stop = True
+                    return(400000)
             if event.type == pygame.QUIT:
                 sys.exit()
