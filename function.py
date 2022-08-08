@@ -2,7 +2,7 @@ import sys,pygame
 
 list_letters=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q",
                   "R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7",
-                  "8","9","0"," "]
+                  "8","9"," "]
 list_adress=["Image/Letters/A.png","Image/Letters/B.png","Image/Letters/C.png",
                  "Image/Letters/D.png","Image/Letters/E.png","Image/Letters/F.png",
                  "Image/Letters/G.png","Image/Letters/H.png","Image/Letters/I.png",
@@ -15,7 +15,7 @@ list_adress=["Image/Letters/A.png","Image/Letters/B.png","Image/Letters/C.png",
                  "Image/Letters/1.png","Image/Letters/2.png","Image/Letters/3.png",
                  "Image/Letters/4.png","Image/Letters/5.png","Image/Letters/6.png",
                  "Image/Letters/7.png","Image/Letters/8.png","Image/Letters/9.png",
-                 "Image/Letters/0.png"]
+                 "Image/Letters/00.png"]
 
 list_adressb=["Image/Letters/A2.png","Image/Letters/B2.png","Image/Letters/C2.png",
                   "Image/Letters/D2.png","Image/Letters/E2.png","Image/Letters/F2.png",
@@ -29,7 +29,7 @@ list_adressb=["Image/Letters/A2.png","Image/Letters/B2.png","Image/Letters/C2.pn
                   "Image/Letters/1b.png","Image/Letters/2b.png","Image/Letters/3b.png",
                   "Image/Letters/4b.png","Image/Letters/5b.png","Image/Letters/6b.png",
                   "Image/Letters/7b.png","Image/Letters/8b.png","Image/Letters/9b.png",
-                  "Image/Letters/0.png"]
+                  "Image/Letters/00A.png"]
 
 def draw(screen,adress,position):
     image = pygame.image.load(adress)
